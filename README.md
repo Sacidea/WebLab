@@ -42,4 +42,6 @@ If you are developing a production application, we recommend using TypeScript wi
 26
 27 ## Ekran Goruntusu
 <img width="1703" height="767" alt="image" src="https://github.com/user-attachments/assets/4b611985-cb5e-45f5-9a4f-55c8eeaa2d92" />
+<img width="1781" height="858" alt="image" src="https://github.com/user-attachments/assets/e0866aa2-1aac-4c76-af4b-c945a201177b" />
+
 
