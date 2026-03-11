@@ -1,7 +1,12 @@
 import './App.css';
+
 import profilGorseli from'./assets/profil.png'
+import proje1Gorseli from'./assets/proje1.jpg'
+import proje2Gorseli from'./assets/proje2.jpg'
+
 function App() {
   return (
+
     <>
    { /* 1. Ana içeriğe atla bağlantısı (Skip Link) */}
       <a href="#main-content" className="skip-link">
@@ -11,7 +16,7 @@ function App() {
          {/* 2. ARIA etiketi eklendi */}
         <nav aria-label="Ana navigasyon"></nav>
         {/* Sayfada yalnızca bir tane h1 olmalı kuralı */}
-        <h1>Sacide Direk - Kişisel Portföy</h1>
+        <h1 className="site-title">Sacide Direk - Kişisel Portföy</h1>
         <nav>
           <ul>
             <li><a href="#hakkimda">Hakkımda</a></li>
@@ -23,33 +28,57 @@ function App() {
 
       {/* Ana içerik main içinde, sayfada sadece 1 tane olabilir */}
       <main>
+          
         <section id="hakkimda">
+            <div className="about-content">
           <h2>Hakkımda</h2>
-          {/* Profil fotoğrafı ve alt metni */}
+          
           <figure>
             <img src={profilGorseli} alt="Sacide Direk profil fotoğrafı"/>
             <figcaption>Sacide Direk</figcaption>
           </figure>
           <p>Merhaba, ben Sacide Direk. Web geliştirme alanında çalışmalar yapıyorum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, corporis doloremque<br></br>
+             quod omnis distinctio, quaerat iusto dolorum libero temporibus, veniam hic ex nisi natus <br></br>
+             ipsa ab impedit obcaecati aut non?</p>
+          <ul className="skill-tags" role="list" aria-label="Beceri etiketleri">
+       <li>HTML5</li>
+       <li>CSS3</li>
+       <li>JavaScript</li>
+       <li>React</li>
+       <li>TypeScript</li>
+       <li>Git</li>
+       </ul>
+       </div>
         </section>
-
+        
         <section id="projeler">
           <h2>Projelerim</h2>
+          {/* Kartlari sarmalayan Grid kapsayicisi */}
+          <div className="project-grid">
           
           {/* 1. Proje Kartı */}
-          <article>
+          <article className="project-card">
             <h3>E-Ticaret Sitesi</h3>
-            <img src="proje1.jpg" alt="E-Ticaret sitesi ana sayfa ekran görüntüsü" />
-            <p>Kullanıcıların ürün satın alabildiği bir web uygulaması.</p>
+              <img src={proje1Gorseli} alt="E-Ticaret sitesi ana sayfa ekran görüntüsü" />
+      <p>React ve Node.js ile gelistirilmis tam kapsamli bir e-ticaret uygulamasi.</p>
+      <ul className="skill-tags">
+        <li>React</li>
+        <li>Node.js</li>
+        <li>MongoDB</li>
+      </ul>
           </article>
+          
 
           {/* 2. Proje Kartı */}
-          <article>
+          <article className="project-card">
             <h3>Blog Uygulaması</h3>
-            <img src="proje2.jpg" alt="Blog uygulaması makale okuma sayfası ekran görüntüsü" />
+            <img src={proje2Gorseli} alt="Blog uygulaması makale okuma sayfası ekran görüntüsü" />
             <p>Kişisel yazılarımı paylaştığım blog platformu.</p>
           </article>
+          </div>
         </section>
+        
 
         <section id="iletisim">
           <h2>İletişim</h2>
